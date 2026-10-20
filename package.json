@@ -1,0 +1,35 @@
+{
+  "name": "pc-mcp",
+  "version": "1.0.0",
+  "description": "Servidor MCP local que da a agentes de IA acesso controlado ao seu PC: terminal, arquivos, zips e transferencia PC <-> sandbox, com URL publica e token gerados automaticamente.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "pc-mcp": "dist/pc-mcp.mjs"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node dist/pc-mcp.mjs",
+    "dev": "tsx src/cli.ts",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "archiver": "^8.0.0",
+    "extract-zip": "^2.0.1",
+    "yauzl": "^3.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/archiver": "^8.0.0",
+    "@types/node": "^22.20.5",
+    "@types/yauzl": "^3.4.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
